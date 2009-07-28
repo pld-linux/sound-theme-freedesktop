@@ -1,12 +1,12 @@
 Summary:	freedesktop.org sound theme
 Name:		sound-theme-freedesktop
-Version:	0.1
+Version:	0.2
 Release:	1
 Group:		Themes
-Source0:	http://0pointer.de/public/%{name}.tar.gz
-# Source0-md5:	35f978665f0854f29a17a0974e780b1b
+Source0:	http://people.freedesktop.org/~mccann/dist/%{name}-%{version}.tar.bz2
+# Source0-md5:	45c8383071d5c6514aa1899e2d0fc675
 License:	GPLv2+ and LGPLv2+ and CC-BY-SA and CC-BY
-URL:		http://0pointer.de/public/sound-theme-freedesktop.tar.gz
+URL:		http://freedesktop.org/wiki/Specifications/sound-theme-spec
 # For details on the licenses used, see README
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -16,14 +16,16 @@ The default freedesktop.org sound theme following the XDG theming
 specification (http://0pointer.de/public/sound-theme-spec.html).
 
 %prep
-%setup -q -n freedesktop
+%setup -q
 
 %build
+%configure
+make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_datadir}/sounds/freedesktop
-cp -av index.theme stereo/ $RPM_BUILD_ROOT%{_datadir}/sounds/freedesktop
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
