@@ -1,13 +1,15 @@
 Summary:	freedesktop.org sound theme
 Name:		sound-theme-freedesktop
-Version:	0.2
+Version:	0.3
 Release:	1
 Group:		Themes
-Source0:	http://people.freedesktop.org/~mccann/dist/%{name}-%{version}.tar.bz2
-# Source0-md5:	45c8383071d5c6514aa1899e2d0fc675
+Source0:	http://cgit.freedesktop.org/sound-theme-freedesktop/snapshot/%{name}-%{version}.tar.bz2
+# Source0-md5:	b7a8de703be9d755fd6f1f48e8b0dfe8
 License:	GPLv2+ and LGPLv2+ and CC-BY-SA and CC-BY
 URL:		http://freedesktop.org/wiki/Specifications/sound-theme-spec
 # For details on the licenses used, see README
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -19,6 +21,9 @@ specification (http://0pointer.de/public/sound-theme-spec.html).
 %setup -q
 
 %build
+%{__aclocal}
+%{__autoconf}
+%{__automake}
 %configure
 make
 
