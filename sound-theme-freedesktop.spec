@@ -10,6 +10,9 @@ URL:		http://freedesktop.org/wiki/Specifications/sound-theme-spec
 # For details on the licenses used, see README
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
+BuildRequires:	glib2-devel
+BuildRequires:	intltool
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -25,7 +28,7 @@ specification (http://0pointer.de/public/sound-theme-spec.html).
 %{__autoconf}
 %{__automake}
 %configure
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
