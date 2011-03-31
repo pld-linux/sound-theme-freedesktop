@@ -1,18 +1,18 @@
 Summary:	freedesktop.org sound theme
 Name:		sound-theme-freedesktop
-Version:	0.3
+Version:	0.7
 Release:	1
 Group:		Themes
-Source0:	http://cgit.freedesktop.org/sound-theme-freedesktop/snapshot/%{name}-%{version}.tar.bz2
-# Source0-md5:	b7a8de703be9d755fd6f1f48e8b0dfe8
+Source0:	http://people.freedesktop.org/~mccann/dist/%{name}-%{version}.tar.bz2
+# Source0-md5:	7bcad4fa54570f80c612012bce66f60f
 License:	GPLv2+ and LGPLv2+ and CC-BY-SA and CC-BY
 URL:		http://freedesktop.org/wiki/Specifications/sound-theme-spec
 # For details on the licenses used, see README
-BuildRequires:	autoconf
-BuildRequires:	automake
+BuildRequires:	autoconf >= 2.60
+BuildRequires:	automake >= 1:1.9
 BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel
-BuildRequires:	intltool
+BuildRequires:	intltool >= 0.40.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -50,4 +50,4 @@ touch --no-create %{_datadir}/sounds/freedesktop
 %dir %{_datadir}/sounds/freedesktop
 %dir %{_datadir}/sounds/freedesktop/stereo
 %{_datadir}/sounds/freedesktop/index.theme
-%{_datadir}/sounds/freedesktop/stereo/*.ogg
+%{_datadir}/sounds/freedesktop/stereo/*.oga
