@@ -1,12 +1,12 @@
 Summary:	freedesktop.org sound theme
 Summary(pl.UTF-8):	Motyw dźwiękowy freedesktop.org
 Name:		sound-theme-freedesktop
-Version:	0.7
+Version:	0.8
 Release:	1
 Group:		Themes
 License:	GPL v2+, LGPL v2+, CC-BY-SA, CC-BY
 Source0:	http://people.freedesktop.org/~mccann/dist/%{name}-%{version}.tar.bz2
-# Source0-md5:	7bcad4fa54570f80c612012bce66f60f
+# Source0-md5:	d7387912cfd275282d1ec94483cb2f62
 URL:		http://freedesktop.org/wiki/Specifications/sound-theme-spec
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake >= 1:1.9
