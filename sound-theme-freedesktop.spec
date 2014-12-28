@@ -10,7 +10,7 @@ Source0:	http://people.freedesktop.org/~mccann/dist/%{name}-%{version}.tar.bz2
 URL:		http://freedesktop.org/wiki/Specifications/sound-theme-spec
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake >= 1:1.9
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel
 BuildRequires:	intltool >= 0.40.0
 BuildArch:	noarch
